@@ -1,6 +1,0 @@
-let variable = data; 
-
-Seven primitive data types
-  String : let stringVar = 'Hello';
-
-console.log(variable); 
