@@ -1,1 +1,82 @@
+comment : <!-- this is a comment -->
 
+HTML elements have an opening and closing tage with content in between
+  - <openingTag>content</closingTag>
+attributes : special words used inside opening tag of an element to control it's behavior
+elements: 
+  all pages begin with <!DOCTYPE html> : declaration ensures browser tries to meet industry-wide specifications
+  html : root element wraps all content of the page
+    - lang attribute specifices language of the page
+  body : all page content elements that should be rendered to the page go inside the body element
+  head : important information not included in body
+  footer : define footer for document or section
+
+  h1 : heading element used for main heading of a webpage
+    - <h1>This is a main heading </h1>
+    - h1 through h6 --> lowest number of most importance
+  
+  p : create paragraph of text
+  
+  main : represents main content of the body of an HTML document, content inside main should be unique to the doc and not repeat elsewhere in the doc 
+  
+  img : images
+    - void element : no closing tag
+    - src attribute : specify image URL
+    - alt attribute : text used when image fails to load
+      - <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back">
+  
+  a : anchor link to another page 
+    - <a href="https://freecatphotoapp.com">link to cat pictures</a>
+    - can turn any text into a link
+    - target attribute : open links in new tab
+      - target="_blank" opens linked document in a new tab or window 
+      <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+    turn image into link : <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  
+  section : defines sections in a document (chapters, headers, footers, etc)
+    - <section>content</section>
+
+  ul : unordered list of items
+  ol : numbered list of items
+  li : create list item in ordered or unordered list
+      <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+      </ul>
+
+  figure : represents self-contained content and allows association of image with a caption
+  figcaption : add caption to image described in figure 
+
+  em : place emphasis on word of phrase
+  strong : indicate text is of strong importance
+  
+  form : get information from user
+    - action attribute : indicate where form data should be sent
+  input : collect data from web form 
+    - inline : don't appear on new line
+    - void 
+    - type attribute : many kinds of input
+      - password, reset buytton, control, checkbox
+    - name attribute : represent data being submitted
+    - placeholder attribute : text to giver user an example
+    - required attribute : form can not be submitted without this information
+      - no set value, just add word required to input element
+  button : create clickable button
+    - inline 
+    - radio button : questions where you want only one answer out of multiple options   
+      - <input type="radio"> cat (radio button with option of cat)
+    - name attribute : two buttons with same name attribute can not be selected at same time 
+    - value attribute : button form data based on name and value attributes
+    - id attribute : specify HTML elements, each id attribute's value must be unique from all other id values for the entire page 
+    - checked attribute : make checkbox checked or radio button selected by default, no value needed
+  label : associate text for input element with input element itself 
+    - for attribute : another way to associate an input element's text with the leement itself is nesting the text within a label elemend and add a for attribute with same value as input element's id attribute 
+
+  checkbox and radio buttons form data are name/value attribute pairs, value attribute is optional but best practice is to include it for all checkboxes or radio buttons on the page
+
+  fieldset : group related inputs and labels together 
+  legend : caption for content in fieldset element
+  title : determines what browsers show in the title bar or tab for the page
+  meta : set browser behavior by adding meta elements in the head
+    - void
