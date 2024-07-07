@@ -1,1 +1,47 @@
+CSS used to style HTML documents 
+x.css files store all styles in separate file than the html document
+  - link element
+    - <link rel="stylesheet" href="styles.css">
 
+/* comment */
+
+Elements 
+  style : sepcify properties for elements
+    - element1, element2, element3... { property: value; }
+    - properties
+      - text-align: center...
+      - background-color: color
+      - border-color: color
+      - background-image: imageURL
+      - font-family: font, fallback_font
+      - font-size: 30px
+      - width: 100px or x%
+      - max-width: 500px
+      - margin-left/right: auto 
+        - center horizontally by setting left and right margin to auto
+      - padding-left/right/top/bottom: 20px
+        - padding: 20px would do all 4 properties
+      - display: inline-block
+      - color
+      
+  div : design layout purposes 
+    - used inside body
+    - id="name"
+    - class="name"
+
+  article : contains multiple elements that have related information
+  hr : divider
+    - self closing
+    - height property
+
+For styling of the page to look similar on mobile and desktop add thsi meta element with content attribute in the head: 
+  - <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+#id selector targest elements with id attribute
+.class selector 
+  - class attribute can be applied to any element
+  - .class element { } styles all of that element in the class
+pseudo selector for when link is visited
+  - a:visisted { property: value }
+  - a:hover { property: value } 
+  - a:active { property: value }
