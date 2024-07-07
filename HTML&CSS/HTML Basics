@@ -12,7 +12,7 @@ elements:
   footer : define footer for document or section
 
   h1 : heading element used for main heading of a webpage
-    - <h1>This is a main heading </h1>
+    - <h1>This is a main heading</h1>
     - h1 through h6 --> lowest number of most importance
   
   p : create paragraph of text
@@ -71,7 +71,7 @@ elements:
     - id attribute : specify HTML elements, each id attribute's value must be unique from all other id values for the entire page 
     - checked attribute : make checkbox checked or radio button selected by default, no value needed
   label : associate text for input element with input element itself 
-    - for attribute : another way to associate an input element's text with the leement itself is nesting the text within a label elemend and add a for attribute with same value as input element's id attribute 
+    - for attribute : another way to associate an input element's text with the element itself is nesting the text within a label elemend and add a for attribute with same value as input element's id attribute 
 
   checkbox and radio buttons form data are name/value attribute pairs, value attribute is optional but best practice is to include it for all checkboxes or radio buttons on the page
 
