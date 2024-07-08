@@ -11,8 +11,8 @@ Elements
     - properties
       - text-align: center...
       - background-color: color
-      - border-color: color
-      - border-left/right/top/bottom-width: 10px
+      - border-left/right/top/bottom-width/style/color: 
+        - no direction defaults to all
       - background-image: imageURL
       - font-family: font, fallback_font
       - font-size: 30px
