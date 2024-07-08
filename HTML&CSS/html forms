@@ -1,0 +1,9 @@
+vh unit : viewport height = 1% of viewport height 
+rem unit : root em, relative to font size of html element 
+
+form element 
+  - action attribute: link URL 
+  - method attribute "get" or "post" determines how to send data to tthe url specified by action attribute 
+
+block : different lines 
+inline : same line
