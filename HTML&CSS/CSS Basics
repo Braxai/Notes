@@ -13,6 +13,7 @@ Elements
       - background-color: color
       - border-left/right/top/bottom-width/style/color: 
         - no direction defaults to all
+        - shorthand property --> border-left: width style color;
       - background-image: imageURL
       - font-family: font, fallback_font
       - font-size: 30px
