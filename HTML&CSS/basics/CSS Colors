@@ -1,0 +1,26 @@
+rgb(red, blue, green)
+  - 0-255
+
+#001122
+  - red, blue, green represented as 2 hex characters 00 to FF 
+
+hsl(hue, saturation, lightness)
+  - hue 0-360
+    - red : 0
+    - green : 120 
+    - blue : 240
+  - saturation 0-100%
+  - lightness 0-100%
+  
+linear-gradient(gradientDirection, color1, color2, ...) 
+  - gradient direction is degrees, ex: 90deg
+    - default 180 or top to bottom
+  - color stops can be added as a percentage after the color to determine how much space it takes up 
+    - linear-gradient(gradientDirection, color1 x%, color2 x%, ...) 
+
+opacity 
+  - 0 to 1.0 is 0 to 100%
+  
+alpha channel : sets opacity 
+  - rgba(redValue, greenValue, blueValue, alphaValue);
+    - alphaValue from 0 to 1.0
