@@ -7,3 +7,19 @@ form element
 
 block : different lines 
 inline : same line
+
+input 
+  - types : text, email, password, file, number, submit (value="Submit" as well)
+  - id 
+    - related label has a for attribute for that id
+  - required attribute 
+  - minlength
+  - pattern="[a-z0-5]{8,}" --> eight or more lowercase letters or digits 0 to 5
+
+select element : container for group of option elements
+option element : label for each dropdown option
+  - select and option require closing tags
+  - option needs a value attribute 
+
+textarea element : like input element of type text but can receive multi-line text  and an initial number of text rows and columns 
+  - placeholder attribute accepts a text value which is displayed until user starts typing 
