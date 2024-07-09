@@ -23,3 +23,9 @@ option element : label for each dropdown option
 
 textarea element : like input element of type text but can receive multi-line text  and an initial number of text rows and columns 
   - placeholder attribute accepts a text value which is displayed until user starts typing 
+
+element:last-of-type {} selector
+
+atrribute selector, selects an element based on the given attribute value 
+  - element[attribute="password"]
+
