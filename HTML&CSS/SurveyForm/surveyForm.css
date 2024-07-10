@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   background-color: rgb(110, 78, 47);
   color: white;
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
 }
 
 h1, p {
