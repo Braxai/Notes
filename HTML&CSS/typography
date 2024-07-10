@@ -1,0 +1,18 @@
+letter-spacing property 
+justify-content property 
+align-items property 
+
+use a bold class in cases where there are lots of bold elements
+span element : used to style specific portions of text
+
+create dividers with classes and target elements in them with the structure 
+  .divider-class element { property }
+
+<div class="divider medium"></div>
+  - .divider and .medium selectors defined separately in css file but both apply to this div
+
+:not pseudo-selector can selects all elements that do not match given css rule
+div:not(#example) {
+  color: red;
+}
+  - all div elements without an id of example; 
