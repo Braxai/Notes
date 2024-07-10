@@ -1,12 +1,15 @@
 body {
+  font-family: Tahoma;
+  font-size: 16px;
+  background-image: url(https://ichef.bbci.co.uk/images/ic/480xn/p033wrw5.jpg);
+}
+
+.survey {
   width: 100%;
   height: 100vh; 
   margin: 0;
-  font-family: Tahoma;
-  font-size: 16px;
   background-color: rgb(110, 78, 47);
   color: white;
-  background-image: url(https://ichef.bbci.co.uk/images/ic/480xn/p033wrw5.jpg);
 }
 
 h1, p {
