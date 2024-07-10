@@ -1,0 +1,35 @@
+Flexbox helps design a webpage so it looks good on any screen size 
+  - one dimensional CSS layout that can control the way items are spaced out and aligned within a container
+  - use by giving an element a display property of flex 
+  - main axis :
+    - flex-direction property
+      - row : horizontal axis with flex items fro mleft to right 
+      - row-reverse: horizontal axis with flex items from right to left
+      - column: vertical axis with flex items from top to bottom
+      - column-reverse: vertical axis with flex items from bottom to top
+  - flex-wrap : determiens how flex tiems behave when flex container is to small 
+    - wrap : wrap to nex row or column 
+    - nowrap (default) : prevent items from wrapping and shrink them if needed 
+  - justify-content : determines how the items insde a flex container are positioned along the main axis
+    - center 
+  - align-items : position flex content along cross axis
+    - if flex-direction is set to row, cross axis is vertical 
+  - object-fit : determine how images should behave, handle different aspect ratios 
+    - cover : fill img container while maintaining aspect ratio by cropping images to fit 
+  - gap : set gaps between rows and columns
+    - row-gap 
+    - column-gap
+
+::after pseudo-element creates an element that is the last child of the selected element, used to add an empty element after last image. 
+Give it same width as the images to push alst image to the left when gallery is in a two column layout.
+.container::after {
+  content: "";
+  width: 860px;
+}
+
+content-box model : when an elemnt has a specific width, that width is calculated based only on the element's content
+  - * : global selector 
+    - * { box-sizing: content-box; }
+
+border-box model : total width of the element, including padding and border, will be the explciit width set
+  - * { box-sizing: border-box; }
