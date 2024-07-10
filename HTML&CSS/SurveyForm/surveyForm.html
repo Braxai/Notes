@@ -6,75 +6,77 @@
     <link rel="stylesheet" href="surveyForm.css"> 
   </head> 
   <body>
-    <h1 id="title">California Summer Heat Survey</h1>
-    <p id="description">This survey will help you determine how hot your summer has been<p>
-      <form id="survey-form">
+    <div class="survey">
+      <h1 id="title">California Summer Heat Survey</h1>
+      <p id="description">This survey will help you determine how hot your summer has been<p>
+        <form id="survey-form">
+  
+          <fieldset> 
+            <label for="name" id="name-label">Name <input id="name" type="text" required placeholder="Enter your name" /></label>
+            <label for="email" id="email-label">Email <input id="email" type="email" required placeholder="Enter your email" /></label>
+            <label for="number" id="number-label">Age (optional) <input id="number" type="number" placeholder="Age" min="13" max="120" /></label>
+          </fieldset> 
 
-        <fieldset> 
-          <label for="name" id="name-label">Name <input id="name" type="text" required placeholder="Enter your name" /></label>
-          <label for="email" id="email-label">Email <input id="email" type="email" required placeholder="Enter your email" /></label>
-          <label for="number" id="number-label">Age (optional) <input id="number" type="number" placeholder="Age" min="13" max="120" /></label>
-        </fieldset> 
-
-        <fieldset>
-          <label for="region">What region of California are you from?
-            <select id="dropdown" name="region">
-              <option value="">(select one)</option>
-              <option value="1">Northern California</option>
-              <option value="2">North Coast</option>
-              <option value="3">Bay Area</option>
-              <option value="4">Central Valley</option>
-              <option value="5">Central Coast</option>
-              <option value="6">Southern California</option>
-              <option value="7">Other</option>
-            </select>
-          </label>
-          <label for="city">What city do you live in?<input id="city" type="text" required placeholder="Enter your city" /></label> 
-          </fieldest>
-          
-        <fieldest>
-          <legend>How would you describe the heat in your area?</legend>
-          <label for="scorching"><input id="scorching" type="radio" name="temperature" value="scorching" class="inline" />Scorching</label>
-          <label for="hot"><input id="hot" type="radio" name="temperature" value="hot" class="inline" />Hot</label>
-          <label for="neutral"><input id="neutral" type="radio" name="temperature" value="neutral" class="inline" checked />Neutral</label>
-          <label for="cold"><input id="cold" type="radio" name="temperature" value="colc" class="inline" />Cold</label>
-          <label for="freezing"><input id="freezing" type="radio" name="temperature" value="freezing" class="inline" />Freezing</label>
-        </fieldset>
-
-        <fieldset> 
-          <legend>What have you done to beat the heat? (check all that apply)</legend> 
-          <div>
-            <input id="swimming" type="checkbox" value="swimming" class="inline" /> <label for="swimming" class="inline">Gone swimming</label>
-          </div>
-          <div>
-            <input id="water" type="checkbox" value="water" class="inline" /> <label for="water" class="inline">Poured water on yourself</label>
-          </div>
-          <div>
-            <input id="lemonade" type="checkbox" value="lemonade" class="inline" /> <label for="lemonade" class="inline">Made ice cold lemonade</label>
-          </div>
-          <div>
-            <input id="sunscreen" type="checkbox" value="sunscreen" class="inline" /> <label for="sunscreen" class="inline">Used sunscreen</label>
-          </div>
-          <div>
-            <input id="stay-inside" type="checkbox" value="stay-inside" class="inline" /> <label for="stay-inside" class="inline">Stayed inside all day</label>
-          </div>
-          <div>
-            <input id="cold-food" type="checkbox" value="cold-food" class="inline" /> <label for="cold-food" class="inline">Ate cold foods</label>
-          </div>
-          <div>
-            <input id="cool-sleep" type="checkbox" value="cool-sleep" class="inline" /> <label for="cool-sleep" class="inline">Slept with no blankets or clothes</label>
-          </div>
-          <div>
-            <input id="fans" type="checkbox" value="fans" class="inline" /> <label for="fans" class="inline">Set up extra fans in the house</label>
-          </div>
-        </fieldset> 
-
-        <fieldset>
-          <label for="additional-comments">Any additional comments about dealing with the heat?
-            <textarea id="additional-comments" rows="5" cols="50" placeholder="Enter you comments here..."></textarea>
-          </label>
-        </fieldset> 
-        <input type="submit" value="Submit" id="submit" />
-      </form>
+          <fieldset>
+            <label for="region">What region of California are you from?
+              <select id="dropdown" name="region">
+                <option value="">(select one)</option>
+                <option value="1">Northern California</option>
+                <option value="2">North Coast</option>
+                <option value="3">Bay Area</option>
+                <option value="4">Central Valley</option>
+                <option value="5">Central Coast</option>
+                <option value="6">Southern California</option>
+                <option value="7">Other</option>
+              </select>
+            </label>
+            <label for="city">What city do you live in?<input id="city" type="text" required placeholder="Enter your city" /></label> 
+            </fieldest>
+            
+          <fieldest>
+            <legend>How would you describe the heat in your area?</legend>
+            <label for="scorching"><input id="scorching" type="radio" name="temperature" value="scorching" class="inline" />Scorching</label>
+            <label for="hot"><input id="hot" type="radio" name="temperature" value="hot" class="inline" />Hot</label>
+            <label for="neutral"><input id="neutral" type="radio" name="temperature" value="neutral" class="inline" checked />Neutral</label>
+            <label for="cold"><input id="cold" type="radio" name="temperature" value="colc" class="inline" />Cold</label>
+            <label for="freezing"><input id="freezing" type="radio" name="temperature" value="freezing" class="inline" />Freezing</label>
+          </fieldset>
+  
+          <fieldset> 
+            <legend>What have you done to beat the heat? (check all that apply)</legend> 
+            <div>
+              <input id="swimming" type="checkbox" value="swimming" class="inline" /> <label for="swimming" class="inline">Gone swimming</label>
+            </div>
+            <div>
+              <input id="water" type="checkbox" value="water" class="inline" /> <label for="water" class="inline">Poured water on yourself</label>
+            </div>
+            <div>
+              <input id="lemonade" type="checkbox" value="lemonade" class="inline" /> <label for="lemonade" class="inline">Made ice cold lemonade</label>
+            </div>
+            <div>
+              <input id="sunscreen" type="checkbox" value="sunscreen" class="inline" /> <label for="sunscreen" class="inline">Used sunscreen</label>
+            </div>
+            <div>
+              <input id="stay-inside" type="checkbox" value="stay-inside" class="inline" /> <label for="stay-inside" class="inline">Stayed inside all day</label>
+            </div>
+            <div>
+              <input id="cold-food" type="checkbox" value="cold-food" class="inline" /> <label for="cold-food" class="inline">Ate cold foods</label>
+            </div>
+            <div>
+              <input id="cool-sleep" type="checkbox" value="cool-sleep" class="inline" /> <label for="cool-sleep" class="inline">Slept with no blankets or clothes</label>
+            </div>
+            <div>
+              <input id="fans" type="checkbox" value="fans" class="inline" /> <label for="fans" class="inline">Set up extra fans in the house</label>
+            </div>
+          </fieldset> 
+  
+          <fieldset>
+            <label for="additional-comments">Any additional comments about dealing with the heat?
+              <textarea id="additional-comments" rows="5" cols="50" placeholder="Enter you comments here..."></textarea>
+            </label>
+          </fieldset> 
+          <input type="submit" value="Submit" id="submit" />
+        </form>
+    </div>
   </body>
 </html> 
