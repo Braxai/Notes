@@ -1,0 +1,48 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+img { width: max/min(250px, 25vw); }
+
+> : child combinator selector used between seletors to target only elements that match the second selector and are a direct child of the first selector 
+nav > ul {
+  display: flex; 
+  justify-content: space-evenly; 
+}
+
+role attribute : indivate purpose behind an element on the page
+  - aria-labelledby attribute used to reference region
+
+sr-only : text only a screen reader can read 
+common patter used to visually hide tet for only screen readers to read : 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+address commonly included in footer
+- <br /> lets each text be on it's own line 
+- dot not have to contain physical geogrpahical locaiton, can be used to provide a link to the subject 
+  <address>
+    freeCodeCamp<br />
+    San Francisco<br />
+    California<br />
+    USA
+  </address>
+
+Contast betwen text and bakground of a heading should be at least 4.5:1
+
+list-style property to control what bullets in list look like 
+
+accesskey attribuet accepts a space-separated list of acess keys, keyboard shortcut on google : alt + accesskey
