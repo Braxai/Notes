@@ -1,0 +1,94 @@
+.indent {
+  margin-left: 1em;
+}
+
+* {
+  background-color: #B4D6DB;
+}
+
+.header {
+  width: 100%; 
+  max-width: 800px; 
+  margin: auto; 
+  text-align: center; 
+  font-family: monospace; 
+  padding: 16px; 
+  border-radius: 8px; 
+  background-color: #85b6bd; 
+  color: #16183C; 
+}
+
+.title {
+  font-family: fantasy; 
+  font-size: 48px;  
+}
+
+.title, .subtitle {
+  background-color: #85b6bd;
+}
+
+h1 {
+  margin-bottom: -16px;
+}
+
+body {
+  font-family: monospace; 
+  font-size: 16px; 
+}
+
+img {
+  margin: 16px; 
+  border: 5px solid #16183C; 
+  width: 100%;
+  border-radius: 15px; 
+  max-width: 100%;
+}
+
+.img-container { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 0; 
+}
+
+legend {
+  text-align: center; 
+  font-family: fantasy; 
+  font-size: 20px; 
+  color: #16183C;
+}
+
+ul {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  max-width: 700px; 
+  margin: 0 auto; 
+}
+
+.links {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  max-width: 700px; 
+  margin: 0 auto; 
+}
+
+#info-link p {
+  margin-bottom: 8px; /* Adjust as needed */
+}
+
+a {
+  color: #16183C;
+}
+
+a:hover {
+  color: #85b6bd;
+  background-color: #16183C;
+}
