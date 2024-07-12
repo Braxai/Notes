@@ -1,0 +1,29 @@
+Responsbie Design tells webpage how it should look on different-size screens 
+
+borswers can apply default margin and padding values to specific elements, to make sure everything looks correct reset box model with html {box-sizing: border-box; }
+- pass on box model to elements with box-sizing:inherit 
+- ::before targets first child of selected element 
+- ::after targets last child of selected element
+*, ::before, ::after {
+  box-sizing: inherit; 
+}
+
+float property : position element to left or right within its container allowing other elements to wrap around it 
+- left, right, none, inherit 
+
+content property : used to set or override the content of the element 
+- setting content property to an empty string "" will ensure the element is rendered to the page while still being empty 
+  - useful when by default pseudo-elements created by ::before and ::after are empty
+
+@media : media query used to conditionally apply CSS, commonly used to apply CSS based on viewport width using max-width and min-width
+@media (max-width: 960px) {
+  .card {
+    padding: 2rem;
+  }
+} 
+padding applied to .card when viewport is 960px wide and below 
+
+overflow: hidden - hides anything that gets pushed out of container
+
+@media (min-width: 500px) and (max-width: 1000px){ } - targets everything in width 500 to 1000px
+
