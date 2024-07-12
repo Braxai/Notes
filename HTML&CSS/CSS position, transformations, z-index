@@ -1,0 +1,21 @@
+CSS Position : static, absolute, relative, sticky, fixed
+- once position set, move element around by setting a pixel or percentage value for top, right, left, and/or bottom
+- static : default, can't be moved
+- relative : positioned according to normal flow of document but top, right, left, bottom become active
+- absolute : taken out of normal flow of document, positioned determiend by trlb
+- fixed : element fixed to page no mater where use scrolls 
+- sticky : relative/fixed hybrid, element sticks to specific position within containing element or viewport based on scroll position
+
+Triangle:
+  height: 0;
+  width: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid red;
+
+transform property modifies shape, position, and size of element without chaning layout 
+- translate(), rotate(), scale(), skew(), matrix()
+
+z-index property defines order of overlappign HTML elements
+- higher z-index positioned over lower
