@@ -1,0 +1,34 @@
+table element 
+- caption element should always be first child of a table
+  - can be positioned with caption-side property
+- thead and tbody elements indicate header and content 
+- tr indicates a table row
+- td indicates data cell
+- th indicates header cell
+- border-collapse: collapse; allows cell border to collapse int oa single border
+
+span[class~="sr-only"] {} selects any span element whose class includes sr-only
+- clip property defines visible portions of an element
+- clip-path propety determiens shape of clip property 
+this combination makes hidden elements out of document flow :
+position: absolute; 
+padding: 0; 
+margin: -1px;
+
+span[class] {} targets any span element with a class set
+
+x:first/last-of-type
+
+calc() calculates a value based on other values
+
+position: sticky; moved element to its own stack, ensure it does not get hidden by adding a z-index: 999; property
+
+!important can be added to a property to ensure it doesn't get overwritten 
+
+tbody td {
+  width: 100vw; 
+  min-width: 4rem; 
+  max-width: 4rem; 
+} ensures fixed width
+
+:nth-of-type(x) targest specific elements based on their order among siblings of the same type 
