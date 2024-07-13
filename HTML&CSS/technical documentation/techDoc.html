@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Development Documentation Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./techDoc.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <header>
+          <h1 class="nav_title">Web Development Documentation</h1>
+          <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Basic_Structure" class="nav-link">Basic Structure</a></li>
+            <li><a href="#HTML" class="nav-link">HTML</a></li>
+            <li><a href="#CSS" class="nav-link">CSS</a></li>
+            <li><a href="#JavaScript" class="nav-link">JavaScript</a></li>
+            <li><a href="#Resources" class="nav-link">Resources</a></li>
+          </ul>
+        </header>
+      </nav>
+      
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header><h1>Introduction<h2></header>
+          <p>Web development involves creating websites and web applications for the internet. It primarily uses three core technologies: HTML, CSS, and JavaScript. Each of these languages serves a unique purpose and together they create dynamic and interactive web pages.</p>
+        </section>
+
+        <section class="main-section" id="Basic_Structure">
+          <header><h1>Basic Structure</h1></header>
+          <p>Understanding the roles of HTML, CSS, and JavaScript is essential for web development. HTML structures the content, CSS styles it, and JavaScript makes it interactive. Together, they form the foundation of web development, enabling the creation of modern, dynamic websites and applications.</p>
+          <p class="indent">HTML provides the basic structure of the page.</p>
+          <p class="indent">CSS styles the HTML elements, controlling the layout and visual appearance.</p>
+          <p class="indent">JavaScript adds dynamic behavior and interactivity to the page.</p>
+
+        </section>
+
+        <section class="main-section" id="HTML">
+          <header><h1>HTML</h1></header>
+          <p>HTML (HyperTexT Markup Language) is the standard markup language used to create the structure of web pages. It describes the content and layout of a page using elements and tags.</p>
+          <p><strong>Elements</strong> are the building blocks of HTML. Tags indicate the beginning and end of an element in the following structure:</p> <code class="indent">&ltopening tag&gtcontent&lt/closing tag&gt.</code>
+          <p class="indent">Some elements such as images and anchors are self closing and will not have content or a closing tag. All of these elements functionality can be included in an opening tag utilizing attributes.</p>
+          <p><strong>Attributes</strong> can be included within the tags to provide additional information about elements. For example an element can include a class attribute like so: </p><code class="indent">&ltp class="value"&gtcontent&lt/p&gt</code>
+          <p>Common Elements</p>
+          <ul>
+            <li>Body: &ltbody&gt <li class="indent">container for all of a page's content</li></li>
+            <li>HTML: &lthtml&gt <li class="indent">all html files are within an over-arching html tag, this is the basic tag that defines an html document.</li></li>
+            <li>Headings: &lth1&gt to &lth6&gt <li class="indent">create six levels of document headings ranging from small to large to breakup the page</li></li>
+            <li>Paragraphs: &ltp&gt <li class="indent">basic method of including text</li></li>
+            <li>Anchor: &lta&gt <li class="indent">creates hyperlinks</li></li>
+            <li>Images: &ltimg&gt <li class="indent">include images</li></li>
+            <li>Lists: &ltul&gt, &ltol&gt, &ltli&gt <li class="indent">ul (unordered list) and ol(ordered list) include li (list items) to create organized lists of information</li></li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="CSS">
+          <header><h1>CSS</h1></header>
+          <p>CSS (Cascading Style Sheets) is used to style and layout HTML elements. It controls the visual presentation of web pages, including colors, fonts, and layouts.</p>
+          <p><strong>Selectors</strong> target specific HTML elements to apply styles to them. Selectors take the form of: </p><code class="indent"> target{ property: value; }</code>
+          <p class="double-indent"> common targets are an element, a class attribute identified by .class, an id attribute identified by #id but there are additional methods to target different parts of an html document.</p>
+          <p><strong>Properties</strong> define the style to be applied to a target in the html document. Some common examples are changing colors, qualities of the font, the location of the element on the document through widht, height, position, margins, and padding, as well as the structure for how it is displayed.</p>
+          <p><strong>Values</strong> are the setting for a property. For example a color property could be set to red, or a font-size property could be set to 16px.</p>
+        </section>
+
+        <section class="main-section" id="JavaScript">
+          <header><h1>JavaScript</h1></header>
+          <p>JavaScript is a programming language that adds interactivity and dynamic behavior to web pages. It can manipulate HTML and CSS, handle events, and perform calculations.</p>
+          <p><strong>Variables</strong> store data values.</p><code class="indent">var x = 10;</code><p  class="indent">The scope of a variable can be global by declaring it outside of any function but when declared within a function it is local to that function.</p></p>
+          <p><strong>Constants</strong> are created with the const keyword and cannot change value. </p><code class="indent">const PI = 3.14;</code>
+          <p>JavaScript has six primite data types</p>
+          <ul>
+            <li>Boolean</li>
+            <li>null</li>
+            <li>undefined</li>
+            <li>Number</li>
+            <li>String</li>
+            <li>Symbol (unique and immutable instances)</li>
+          </ul>
+          <p>and Object in addition to these</p>
+          <p>if...else statements come in the form of</p>
+              <code>
+                <p>if (condition_1) { </p>
+                  <p class="indent">statement_1;</p>
+                <p>} else if (condition_2) { </p>
+                  <p class="indent">statement_2;</p>
+                <p>} else { </p>
+                  <p class="indent">statement_3;</p>
+                <p>}</p>
+              </code>
+          <p>for loops are written as follows: </p><code class="indent">for (initialExpression; condition; incrementExpression) {statement}
+  </code>
+          <p>while statements are written as :</p><code class="indent">while (condition) statement</code>
+        <p><strong>Functions</strong> are reuseable snippets of code that have a declaration using a keyword followed by the name of a function, a list of arguments to the functions, and the statements that define the function.</p>
+        <code class="indent">function name(argument1, argument2...) { statement... return statement; }</code>
+
+        </section>
+
+        <section class="main-section" id="Resources">
+          <header><h1>Resources</h1></header>
+          <p>Learn about HTML fundamentals here : <a href ="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML Guide</a></p>
+          <p>Learn to style HTML using CSS here : <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS Guide</a></p>
+          <p>Learn more about JavaScript at this: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a></p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
