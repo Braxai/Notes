@@ -1,0 +1,7 @@
+Veriables 
+- declarations begin with two dashes -- and are given a aname and a value 
+  - --variable-name: value; 
+- use : var(--variable-name)
+  - var(--variable1, fallback-value)
+
+variables often described in :root selector so they are usable everywhere
