@@ -1,0 +1,40 @@
+img loading attribute : set to lazy tells broser not to fetch image resource until it is needed
+img object-fit property tells browser how to position element within its container, cover will set image to fill contianer 
+Referrer HTTP header contains information about address of URL of page, setting rel attribute to noreferrer omits this information 
+
+blockquote element usage :
+<blockquote><hr></hr><p class="quote">This is a quote</p><hr></hr></blockquote>
+
+normalize CSS rules by targeting all elements : 
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+CSS Grid offers a two dimensional layout to center items horizontally and vertically
+- main { display: grid; }
+- grid-template-columns: 1fr 94rem 1fr; : 3 columns, middle 94 rem wide, left and right 1 fraction of the remaining space in the grid container
+  - minmax(x, y)
+- row-gap 
+- grid-column : shorthand for grid-column-start and grid-column-end tells grid item which grid line to start and end at
+  - grid-column: 2/3; tells to start at grid line 2 and end at grid line 3
+  - grid-column: 1/-1; element stops at the last column
+- grid-template-columns: repeat(20, 200px) would create 20 columns each 200px wide 
+- grid-auto-flow : takes row or column as first value, with an optional second value of dense, uses autoplacement algorithm to create new columns for content as needed
+  - dense value allows algorithm to backtrack and fill holes in the grid with smaller icons but this can cause items to appear out of order
+- align-items aligns child elements along column axis 
+- justify-items aligns child elements along row axis
+  - place-items: one value sets align and justify, two sets align then justify 
+- column-width
+- text-align: justify; makes text fill up each line fully
+- .first-paragraph::first-letter {} targets first letter of first-paragraph class 
+  - float:left + margin-right: 1rem places first letter to left of container and allows text to wrap aroud it
+
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr; 
+  }
+} collapses images into one column on smaller screens, .image-wrapper is an aside element around the images 
