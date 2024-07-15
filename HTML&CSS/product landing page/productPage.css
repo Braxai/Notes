@@ -1,0 +1,250 @@
+@media (max-width: 600px) {
+    #nav-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    
+    #nav-bar li {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem; /* Adjust spacing between items */
+    }
+    body {
+        min-width: 600px; 
+        overflow: auto/scroll;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+
+}
+
+/* Header */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box; 
+}
+
+#header-img {
+    height: 3.5rem;
+    width: auto; 
+    flex-shrink: 0; 
+}
+
+#nav-bar {
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: flex-end; 
+    margin-left: 1rem; 
+    margin-right: 1rem;
+}
+
+#nav-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar li {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+#nav-bar li:hover {
+  background-color: #5374cf;
+  cursor: pointer; 
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: #cfad53;
+    font-weight: bold;
+    white-space: nowrap; 
+    font-size: 1rem; 
+}
+
+main {
+    padding-top: 4rem; 
+}
+
+section {
+    padding: 1.5rem;
+}
+
+/* Form Section */
+#form-section {
+    text-align: center; 
+}
+
+.form-title {
+    font-size: 2rem;
+    font-family: verdana;
+}
+
+#email {
+    width: 300px;
+    padding: 0.5rem;
+    margin: 0 auto; 
+    font-size: 1.1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    display: block; 
+    width: 200px;
+    margin: 1rem auto; 
+    height: 2rem;
+    font-size: 1rem;
+    background-color: #cfad53; 
+    border: none;  
+    color: #333;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #5374cf; 
+  color: #cfad53; 
+  cursor: pointer; 
+  border: 1px solid black; 
+}
+
+/* Information Section */
+
+.information-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2rem 1rem;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.row {
+    display: contents;
+}
+.icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+}
+.content {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.information-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: .25rem;
+}
+.sub-info {
+    color: #666;
+}
+
+/* Video */
+
+#video-section{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 20%;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; 
+    min-height: 100px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Pricing Options */ 
+h2 {
+    text-align: center; 
+    font-size: 2rem;
+    font-family: verdana;
+}
+.pricing-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pricing-option {
+    width: 30%;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px; 
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-option h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.pricing-option .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #cfad53;
+    margin-bottom: 10px;
+}
+
+.pricing-option p {
+    color: #666;
+    margin: 0.5rem;
+}
+
+.pricing-option button {
+    padding: 10px 20px;
+    background-color: #cfad53;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #333;
+}
+
+.pricing-option button:hover {
+    background-color: #5374cf;
+    color: #cfad53;
+    border: 1px solid black; 
+}
