@@ -1,0 +1,35 @@
+transform-origin : set point around which a CSS transformation is applied 
+- x% y% offset origin by x% from left and y% from top
+  - 0% 0% : top left corner
+  - 50% 0% : middle of the top edge of element
+
+@keyframes : rule used to define flow of CSS animation
+- create selectors for specific points in the animation sequence (0%, 25%) 
+- can use from and to to define the start and end of sequence
+- require an assigned name, @keyframes wheel {} is named wheel
+- animation name : link @keyframes rule to CSS selector
+- animation duration : animation sequence length in s or ms
+- animation-iteration-count : how many times the animation should repeat, number of infinite
+- animation-timing=function : how animation progress over time
+  - linear : run at same rate start to finish
+  - east-in-out : start and end at slower pace but move more quickly in the middle
+animation: animation-name animation-duration animation-timing-function animation-iteratoun-count
+
+animation: cabins 10s ease-in-out infinite;
+@keyframes cabins {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: yellow; 
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
