@@ -1,7 +1,27 @@
+normalize:
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 transform-origin : set point around which a CSS transformation is applied 
 - x% y% offset origin by x% from left and y% from top
   - 0% 0% : top left corner
   - 50% 0% : middle of the top edge of element
+
+Transform 
+- skew : takes two arguments, first is angle to shear x axis by, second is angle to shear y axis by
+- z-index 
+- rotate
+- opacity 
+- scaleX(-1) inverts x axis
+- scale(1.5) increase size by 50% in both dimensions 
+transtion: all duraiton timing-function delay;
+
+:active pseudo selector for when clcked
+cursor: not-allowed to show users you can't drag elements around
 
 @keyframes : rule used to define flow of CSS animation
 - create selectors for specific points in the animation sequence (0%, 25%) 
