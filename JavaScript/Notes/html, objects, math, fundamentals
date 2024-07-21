@@ -1,0 +1,41 @@
+<script></script> loads JavaSCript into HTML file
+- src=".js file"
+
+Java Script interacts with HTML using Document Object Model (DOM) 
+- tree of objects representing HTML
+- document object used to access HTML
+  - querySelector() method takes a CSS selector as an argument and returns first element that matches that selector
+    - let h1 = document.querySelector("h1"); would find the <h1> element in the HTML
+
+- onclick property determines what happens when it is clicked
+    - access using dot notation: button.onclick = myFunction;
+- innerText property controsl text within HTML element
+  - change p element text
+  <p id="info">Demo content</p> 
+  const info = document.querySelector("#info"); 
+  info.innerText = "Hello World"; 
+
+Objects : non primitive data types that sotre key-value pairs
+- objects have properties defined as property: value
+  - dot notation
+    - object.property 
+  - bracket notation needed if there is a space in the name
+    - objectName["property name"];
+  const cat = {
+    name: "Whiskers",
+    "Number of legs": 4,
+  }
+
+Math object contains static properties and methods for mathematical constants and functions 
+- math.random() generates random number from 0 to 1
+- math.floor() roudns given number down to nearest int
+
+innerHTML property allows acces and modification of content inside an HTML element using JavaScript
+- update content for paragraphg element using innerHTML
+  <p id="demo">This is a paragraph.</p> 
+  document.querySelector("#demo").innerHTML = "Hello, innerHTML!";
+
+ternary operator : conditional operator used as one-line if-else statement
+- condition ? expressionIfTrue : expressionIfFalse
+
+.includes() determines if an array contains an element
