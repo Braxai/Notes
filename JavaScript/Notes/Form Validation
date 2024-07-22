@@ -42,3 +42,5 @@ e commonly used as argument to represent an event listener
 
 string.toLowerCase()
 Math.abs(num)
+
+array.from() accepts array-like and returns an array
