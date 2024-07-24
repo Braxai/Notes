@@ -1,0 +1,30 @@
+const audio = new Audio();
+
+... spread operator copies all elements from one array into another
+-  In the example below, both arr1 and arr2 have been spread into combinedArr:
+  const arr1 = [1, 2, 3];
+  const arr2 = [4, 5, 6];
+
+Arrow Functions : anonymous function expression and shorter way to write function
+- () => {}
+- named arrow function : const exampleFunction = () => { // code goes here }
+- Add parameters : const greet = name => { console.log(`Hello, ${name}!`); };
+- implicit returns simple expression : const multiplyTwoNumbers = (num1, num2) => num1 * num2;
+
+map() method iterates through an array and returns a new array
+- const numbers = [1, 2, 3];
+- const doubledNumbers = numbers.map((number) => number * 2); // doubledNumbers will be [2, 4, 6]
+  - function argument is a callback function, in this case (number) => number * 2
+
+join() method concatenates all elements of an array into a single string
+- optional parameter called a separator which can be used to separate each element of the array 
+  const exampleArr = ["This", "is", "a", "sentence"];
+  const sentence = exampleArr.join(" "); // Separator takes a space character
+  console.log(sentence); // Output: "This is a sentence"
+
+?. optional chaining helps prevent errors when accessing nested properties that might be null of undefined
+
+sort() converts elements of an array into strings and sorts them
+- accepts a compare callback function that defines the sort order
+
+find() retrieves first element within an array that fulfills the conditions specified in the provided callback function
