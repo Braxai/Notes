@@ -28,3 +28,16 @@ sort() converts elements of an array into strings and sorts them
 - accepts a compare callback function that defines the sort order
 
 find() retrieves first element within an array that fulfills the conditions specified in the provided callback function
+
+indexOf() array method returns first index at which given element can be found or -1 if not present
+
+filter() method keeps only the elements of an array that satisfy the callback funciton passed to it 
+
+appendChild() add a node or element as child of another element
+
+forEach method loops through an array and performs a funciton on each element of the array 
+
+Randomize an array : array.sort(() => Math.random() - 0.5);
+
+const resetButton = document.createElement("button");
+createTextNode() method creates a text node
