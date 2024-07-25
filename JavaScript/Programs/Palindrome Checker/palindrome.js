@@ -2,7 +2,7 @@ const checkBtn = document.getElementById('check-btn');
 const textInput = document.getElementById('text-input');
 const resultSpan = document.getElementById('result');
 
-checkBtn.addEventListener('click', () => {
+function checkPalindrome() {
   const inputText = textInput.value.trim();
 
   if (inputText === '') {
@@ -23,4 +23,12 @@ checkBtn.addEventListener('click', () => {
   }
 
   resultSpan.style.display = 'block';
+}
+
+checkBtn.addEventListener('click', checkPalindrome);
+textInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+      event.preventDefault();
+      checkPalindrome();
+    }
 });
