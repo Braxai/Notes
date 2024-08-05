@@ -1,0 +1,13 @@
+Object.freeze(obj) prevents object from being changed
+
+Object Destructuring Syntax allows unpacking values from arrays and objects
+  const developerObj = {
+    name: "Jessica Wilkins",
+    isDeveloper: true
+  };
+  
+  // Object destructuring
+  const { name, isDeveloper } = developerObj;
+
+ternary operator
+  condition ? trueValue : falseValue;
