@@ -1,0 +1,17 @@
+constructor initialized with new
+- const currentDate = new Date();
+
+Date Object Methods
+- getDate() returns a number of day (1 - 31)
+- getMonth() returns number of month (0 - 11)
+- getfullYear() returns number of year
+- getHours() returns number of hour (0 - 23)
+- getMinuteS() returns number of minutes (0 - 59)
+
+switch (value) {
+  case 1:
+    statement;
+    break;
+  default:
+    statement;
+}
