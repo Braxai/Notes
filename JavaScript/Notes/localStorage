@@ -1,0 +1,22 @@
+el.classList.add() / el.classList.remove() 
+- add and remove classes from element 
+
+classList toggle method add class if it is not present on the element and removes it if it is 
+- element.classList.toggle("class-to-toggle");
+
+modal elemenet prevents all interaction with elements outside it until the modal has been dismissed
+- dialog element has showModal() method that can be used to display a modal dialog box on a web page
+- dialog element has close() method to close modal dialog box
+
+splice array method modifies arrays by removing, replacing, or adding elements at a specified index while returning the removed elements 
+- three arguments, first mandatory start index, second number of items to remove, third optional replacement element 
+  const fruits = ["mango", "date", "cherry", "banana", "apple"];
+  // Remove date and cherry from the array starting at index 1
+  const removedFruits = fruits.splice(1, 2);
+
+localStorage
+- setItem() method saves an item
+- getItem() method retrives the item 
+- removeItem() method deletes an item
+- clear() method deletes all items 
+need to set items as string using JSON.stringify() and can return them to original form using JSON.parse() after getting them from localStorage
