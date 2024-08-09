@@ -2,19 +2,6 @@ getElementById() access HTML element with given id name
 - <h1 id="title">Main title</h1>
   const mainTitleElement = document.getElementById('title');
 
-Regular Expressions (regex) match specific characters in a string 
-- const regex = /hello/;
-- \s can be used to match any whitespace character 
-- wrapping in [] turns into character class so those characters are ignored regardless of order 
-  - /[helo]/ : ignores h e l and o intead of only helo
-  - [0-9] matches all digits 0 to 9
-    - \d shorthand character for all digits
-- flags added after the second /
-  - g tells pattern to continue looking after it finds a match : /hello/g
-  - i makes character case insensitive
-- use input.replace(regex, "") to remove characters from input string
-- + modifier allows matching a pattern that occurs more than one time 
-
 string.match() takes regex argument and returns array of match results
 
 template literals allow interpolate variables directly within a string, dneoted with backticks ``
