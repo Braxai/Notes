@@ -2,8 +2,6 @@ getElementById() access HTML element with given id name
 - <h1 id="title">Main title</h1>
   const mainTitleElement = document.getElementById('title');
 
-string.match() takes regex argument and returns array of match results
-
 template literals allow interpolate variables directly within a string, dneoted with backticks ``
 - variables passed in to template literal by surrounding the variable with ${}
 
