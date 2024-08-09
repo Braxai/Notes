@@ -1,0 +1,34 @@
+Regular Expressions (regex) match specific characters in a string 
+- const regex = /hello/;
+- \s can be used to match any whitespace character 
+- wrapping in [] turns into character class so those characters are ignored regardless of order 
+  - /[helo]/ : ignores h e l and o intead of only helo
+  - [0-9] matches all digits 0 to 9
+    - \d shorthand character for all digits
+- flags added after the second /
+  - g tells pattern to continue looking after it finds a match : /hello/g
+  - i makes character case insensitive
+- use input.replace(regex, "") to remove characters from input string
+- + modifier allows matching a pattern that occurs more than one time 
+- capture group defines part of expression that should be captured and saved for later reference
+  - wrap part of expression in parentheses
+  - /h(i|ey) camper/ would match either hi camper or hey camper, and would capture i or ey in a group
+  - adding ?: at the start of the parentheses turns it into noncapture group
+- ? quantified is optional match of zero or one occurence of preceding character of group 
+- ^ anchor asserts pattern match starts at the beginning of the full string
+  - $ anchor match end of string
+
+regex examples : 
+  const helpRegex = /please help|assist me/i;
+  const dollarRegex = /[0-9]+ (?:hundred|thousand|million|billion)? dollars/i;
+  const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/i;
+  const stockRegex = /(?:^|\s)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:$|\s)/i;
+  const dearRegex = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:$|\s)/i;
+
+string.match(regex) takes regex argument and returns array of match results
+regex.test(string) returns boolean value indicating if the string matches the regex pattern
+
+| alternating sequence can be used to match either left or right of the | 
+- /yes|no/ will match either yes or no
+
+array.some() accepts callback function which should take an element of the array as the argument, return true if callback function returns true for at least one element in the array 
