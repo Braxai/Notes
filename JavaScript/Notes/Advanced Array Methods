@@ -1,0 +1,22 @@
+array.map()
+- takes callback function as first argument
+
+array.filter() filters elements out of the array creating a new array
+- takes callback function that needs to return a boolean indicating if element should be included in new array
+
+array.reduce() takes an array and applies a callback function to condense the array into a single value 
+- callback function takes two parameters  
+  - first is accumulator
+  - second is current element in the array
+- return value becomes the value of the accumulator on the next iteration
+- second argument is used as initial value of accumulator
+  const sum = array.reduce((acc, el) => acc + el, 0);
+
+array.sort() method converts the elements of an array into strings, then sorts them alphabetically
+- pass in a callback function to the .sort() method. This function takes two arguments, which represent the two elements being compared. The function should return a value less than 0 if the first element should come before the second element, a value greater than 0 if the first element should come after the second element, and 0 if the two elements should remain in their current positions
+
+Set data structure only allows uniquie values
+- passing array into set constructor will remove duplicate values
+
+array.slice() makes shallow copy of the array
+- bad practice to mutate a funciton parameter, using .slice() on an array parameter that is going to be sorted avoids this
