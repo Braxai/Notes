@@ -1,0 +1,9 @@
+window : global object representing browser window
+- onload property allows defining behavior when window has loaded the entire page
+
+currying : return function within a function, allows creating a variable that holds a function to be caled later but with a reference to the parameters of the outer function call
+- const addCharacters = character1 => character2 => num => charRange(character1, character2).map();
+
+common practice to prefix unused parameter with an _
+
+SEE SPREADSHEET PROGRAM
