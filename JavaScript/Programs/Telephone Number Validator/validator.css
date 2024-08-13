@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.phone-case {
+  background-color: black;
+  border-radius: 20px;
+  padding: 20px;
+  width: 200px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-camera {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+}
+
+.phone-screen {
+  background-color: #e0e0e0;
+  width: 85%;
+  height: 95%;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#user-input {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+
+#results-div {
+  width: 100%; 
+  max-height: 225px; 
+  overflow-y: auto; 
+  margin-top: 10px; /* Spacing between input and results */
+  text-align: center; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  padding: 8px;
+  margin: 0px 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  flex: 1;
+}
+
+#check-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+#clear-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.valid-number {
+  color: #0e490c; 
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.invalid-number {
+  color: #553718;
+  font-weight: bold; 
+  letter-spacing: 1px;
+}
+
+#user-input.valid {
+  border-color: #0e490c; 
+}
+
+#user-input.invalid {
+  border-color: #553718; 
+}
