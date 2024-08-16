@@ -1,14 +1,14 @@
-let price = 11.95;
+let price = 10;
 let cid = [
-  ['PENNY', 1.01],
-  ['NICKEL', 2.05],
-  ['DIME', 3.10],
-  ['QUARTER', 4.25],
-  ['ONE', 90.00],
-  ['FIVE', 55.00],
-  ['TEN', 20.00],
-  ['TWENTY', 60.00],
-  ['ONE HUNDRED', 100.00]
+  ['PENNY', 0],
+  ['NICKEL', 0],
+  ['DIME', 0],
+  ['QUARTER', 0],
+  ['ONE', 1],
+  ['FIVE', 5],
+  ['TEN', 0],
+  ['TWENTY', 0],
+  ['ONE HUNDRED', 0]
 ];
 
 function getTotalCid(cid) {
@@ -23,6 +23,7 @@ function calculateChange(due, cid) {
     if (totalCid < due) {
         return { status: "INSUFFICIENT_FUNDS", change: [] };
     } else if (totalCid === due) {
+        // Exact match for the change
         return { status: "CLOSED", change: cid.filter(([_, amount]) => amount > 0) };
     } else {
         for (let i = cid.length - 1; i >= 0; i--) {
@@ -129,10 +130,6 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
     let changeDue = cashInput - price;
     let { status, change } = calculateChange(changeDue, cid);
 
-    if (status !== "INSUFFICIENT_FUNDS") {
-        addCashToDrawer(cashInput, cid); // Add the customer's cash to the drawer after calculating change
-    }
-
     const changeDueElement = document.getElementById('change-due');
     const changeAmountsDiv = document.getElementById('change-amounts');
 
@@ -147,10 +144,27 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
                 changeDueElement.textContent = `Status: INSUFFICIENT_FUNDS`;
                 break;
             case "CLOSED":
-                const closedChangeText = change
-                    .filter(([_, amount]) => amount > 0)
+                const sortedChange = change
+                    .filter(([_, amount]) => amount > 0) /
+                    .sort((a, b) => {
+                        const values = {
+                            'ONE HUNDRED': 100.00,
+                            'TWENTY': 20.00,
+                            'TEN': 10.00,
+                            'FIVE': 5.00,
+                            'ONE': 1.00,
+                            'QUARTER': 0.25,
+                            'DIME': 0.10,
+                            'NICKEL': 0.05,
+                            'PENNY': 0.01
+                        };
+                        return values[b[0]] - values[a[0]]; 
+                    });
+
+                const closedChangeText = sortedChange
                     .map(([name, amount]) => `${name}: $${amount.toFixed(2)}`)
                     .join(', ');
+
                 changeDueElement.textContent = `Status: CLOSED ${closedChangeText}`;
                 changeAmountsDiv.innerHTML = "";
                 break;
@@ -161,6 +175,10 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
                 ).join('');
                 break;
         }
+    }
+
+    if (status !== "INSUFFICIENT_FUNDS") {
+        addCashToDrawer(cashInput, cid);
     }
 
     displayChange();
