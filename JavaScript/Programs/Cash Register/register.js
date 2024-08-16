@@ -1,14 +1,14 @@
-let price = 10;
+let price = 0;
 let cid = [
-  ['PENNY', 0],
-  ['NICKEL', 0],
-  ['DIME', 0],
-  ['QUARTER', 0],
-  ['ONE', 1],
-  ['FIVE', 5],
-  ['TEN', 0],
-  ['TWENTY', 0],
-  ['ONE HUNDRED', 0]
+  ['PENNY', 1.01],
+  ['NICKEL', 2.05],
+  ['DIME', 3.10],
+  ['QUARTER', 4.25],
+  ['ONE', 90.00],
+  ['FIVE', 55.00],
+  ['TEN', 20.00],
+  ['TWENTY', 60.00],
+  ['ONE HUNDRED', 100.00]
 ];
 
 function getTotalCid(cid) {
@@ -23,7 +23,6 @@ function calculateChange(due, cid) {
     if (totalCid < due) {
         return { status: "INSUFFICIENT_FUNDS", change: [] };
     } else if (totalCid === due) {
-        // Exact match for the change
         return { status: "CLOSED", change: cid.filter(([_, amount]) => amount > 0) };
     } else {
         for (let i = cid.length - 1; i >= 0; i--) {
@@ -117,6 +116,12 @@ function addCashToDrawer(amount, cid) {
 document.getElementById('purchase-btn').addEventListener('click', () => {
     let cashInput = parseFloat(document.getElementById('cash').value);
 
+    if (price === 0) {
+        alert("There is no current customer");
+        document.getElementById('cash').value = '';
+        return;
+    }
+
     if (isNaN(cashInput)) {
         alert("Please enter a valid amount.");
         return;
@@ -133,7 +138,7 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
     const changeDueElement = document.getElementById('change-due');
     const changeAmountsDiv = document.getElementById('change-amounts');
 
-    if (cashInput === price) {
+    if (cashInput === parseFloat(price)) {
         changeDueElement.textContent = "No change due - customer paid with exact cash";
         changeAmountsDiv.innerHTML = "";
     } else {
@@ -145,7 +150,7 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
                 break;
             case "CLOSED":
                 const sortedChange = change
-                    .filter(([_, amount]) => amount > 0) /
+                    .filter(([_, amount]) => amount > 0)
                     .sort((a, b) => {
                         const values = {
                             'ONE HUNDRED': 100.00,
@@ -181,6 +186,9 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
         addCashToDrawer(cashInput, cid);
     }
 
+    price = 0;
+    document.getElementById('cash').value = '';
+    updatePriceDisplay();
     displayChange();
 });
 
