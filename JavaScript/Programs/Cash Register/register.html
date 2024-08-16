@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cash Register</title>
+      <link rel="stylesheet" href="register.css">
+  </head>
+  <body>
+      <div class="container">
+          <div class="header">
+              <h1>Cash Register Project</h1>
+          </div>
+          <div id="change-due" class="status-section"></div>
+          <div class="input-section">
+              <label for="cash-input">Enter cash from customer:</label>
+              <input type="number" id="cash" step="0.01" placeholder="0.00">
+              <div class="button-group">
+                  <button id="purchase-btn">Purchase</button>
+                  <button id="next-customer-btn">Next Customer</button>
+              </div>
+          </div>
+          <div class="cash-register">
+              <div class="display-section">
+                  <div class="price-display">
+                      <div class="price-inner-display" id="total"></div>
+                  </div>
+              </div>
+              <div class="main-body">
+                  <div class="change-display">
+                      <div class="change-title">Change in drawer:</div>
+                      <div class="change-amounts" id="change-amounts"></div>
+                  </div>
+                  <div class="squares-grid">
+                      <div class="square"></div>
+                      <div class="square"></div>
+                      <div class="square"></div>
+                      <div class="square"></div>
+                      <div class="square"></div>
+                      <div class="square"></div>
+                      <div class="square"></div>
+                      <div class="square"></div>
+                      <div class="square"></div>
+                  </div>
+              </div>
+              <div class="drawer">
+                  <div class="handle"></div>
+              </div>
+          </div>
+      </div>
+      <script src="register.js"></script>
+  </body>
+</html>
