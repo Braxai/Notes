@@ -52,7 +52,7 @@ body {
 
 .button-group {
     display: flex;
-    gap: 10px; /* Adjust the gap between the buttons */
+    gap: 10px; 
 }
 
 .input-section button {
