@@ -1,0 +1,17 @@
+Fetch API is built-in JavaScript interface to make network requests to a server 
+- fetch() method used to make GET POST PUT or PATCH requests
+  - fetch() method returns a Promise : placeholder object that will either be fulfilled if request is successful or rejected if not   
+    - if promise is fulfilled it resolves to a Response object and can use .then() to access the Response
+      - GET : fetch("url-goes-here").then((res) => res)
+      - to make data usable use .json() to parse it into JSON
+        - .then((res) => res.json())
+      - .catch() handles errors
+  fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);   
+  })
+  .catch((err) => {
+    console.error(`There was an error: ${err}`);
+  });
+
